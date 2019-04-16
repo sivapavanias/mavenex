@@ -13,8 +13,11 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-			sh "hello world"
-             //       bat 'mvn clean compile'
+			//sh "hello world"
+			stage('Invoke Ant Build') {
+steps { *	bat 'mvn -version' *	}
+}
+                  bat 'mvn clean compile'
 			echo 'compiling'
                 }
             }
