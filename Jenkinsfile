@@ -16,7 +16,7 @@ pipeline {
 			//sh "hello world"
 			
 
-                  'mvn clean compile'
+                 // 'mvn clean compile'
 			echo 'compiling'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    'mvn test'
+                   // 'mvn test'
 			echo 'testing.......'
 	           }
             }
