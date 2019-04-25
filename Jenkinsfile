@@ -26,7 +26,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    'mvn test'
+                   sh 'mvn test'
 			echo 'testing.......'
 	           }
             }
